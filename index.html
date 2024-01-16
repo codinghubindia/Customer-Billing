@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>New Billing Software</title>
+</head>
+<body>
+    <h1 align="center">New Billing Software</h1>
+    <form action="">
+        <fieldset style="width:70%; height:70%;">
+            <legend>Enter the Billing Details</legend>
+            <table>
+                <tr>
+                    <th>Item</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                </tr>
+                <tr>
+                    <td>
+            <input type="text" autofocus="" class="item" name="item" list="data" oninput="pri()"/>
+            <datalist id="data">
+                <option>Edly</option>
+                <option>Vada</option>
+                <option>Dosa</option>
+            </datalist>
+                    </td>
+                    <td>
+                        <input type="number" readonly="" name="Price">
+                    </td>
+                    <td>
+            <input type="number" placeholder="Enter Quantity" name="Quantity" oninput="cal()" />
+                    </td>
+                    <td>
+                        <input type="text" readonly name="Total">
+                    </td>
+                </tr>
+            </table>
+            <br/>
+            <br/>
+            <div>
+                <table class="Display" style="width: 100%;height: fit-content;border:1px solid black;">
+                <tr>
+                    <th>Item</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                </tr>
+                </table>
+            </div>
+            <br/>
+            <br/>
+            <input type="button" value="Add" name="add" onclick="Display()" />
+            <input type="button" value="Print" name="print" />
+            <br/>
+            <br/>'
+            <input type="reset" onclick="removeRow()">
+        </fieldset>
+    </form>
+    <script src="app.js"></script>
+</body>
+</html>
